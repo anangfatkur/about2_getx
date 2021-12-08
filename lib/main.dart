@@ -1,40 +1,40 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import './pages/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return GetMaterialApp(
-      home: HomePage(),
-    );
-  }
-}
+// class MyApp extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return GetMaterialApp(
+//       home: HomePage(),
+//     );
+//   }
+// }
 
-class HomePage extends StatelessWidget {
-  // final counterC = Get.put(CounterController());
+// class HomePage extends StatelessWidget {
+//   // final counterC = Get.put(CounterController());
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Home Page"),
-        actions: [
-          IconButton(
-            onPressed: () => Get.to(() => PageTulisan ()),
-            icon: Icon(Icons.access_alarm),
-          ),
-        ],
-      ),
-      body: Center(
-        child: Text("Home Page"),
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Home Page"),
+//         actions: [
+//           IconButton(
+//             onPressed: () => Get.to(() => PageTulisan ()),
+//             icon: Icon(Icons.access_alarm),
+//           ),
+//         ],
+//       ),
+//       body: Center(
+//         child: Text("Home Page"),
+//       ),
+//     );
+//   }
+// }
 
 // class CountWidget extends StatelessWidget {
 //   final counterC = Get.find<CounterController>();
@@ -70,23 +70,37 @@ class HomePage extends StatelessWidget {
 //   }
 // }
 
-class PageTulisan extends StatelessWidget {
-  final textC = Get.put(TulisanController());
-  PageTulisan({Key? key}) : super(key: key);
+// class PageTulisan extends StatelessWidget {
+//   final textC = Get.put(TulisanController());
+//   PageTulisan({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Tulisan Page"),
+//       ),
+//       body: TextField(
+//         controller: textC.myC,
+//       ),
+//     );
+//   }
+// }
+
+// class TulisanController extends GetxController {
+//   final myC = TextEditingController();
+// }
+
+
+//YOUTUBE GETX Workers
+
+class MyApp extends StatelessWidget {
+  const MyApp({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Tulisan Page"),
-      ),
-      body: TextField(
-        controller: textC.myC,
-      ),
+    return MaterialApp(
+      home: HomePage(),
     );
   }
-}
-
-class TulisanController extends GetxController {
-  final myC = TextEditingController();
 }
