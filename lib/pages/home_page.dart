@@ -9,7 +9,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Text Field"),
+        actions: [
+          IconButton(
+            onPressed: () => homeController.reset(),
+            icon: Icon(Icons.refresh_outlined),
+          ),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Center(
